@@ -181,6 +181,16 @@ function draw() {
   textFont("Arial Black");
   text("W\nA S D\nP\tPause", width-((width-w)/2), h/3);
   pop();
+
+    // Giv hint til at focuserer på spillet
+	if (!focused) {
+		push();
+		fill(255).stroke(0).strokeWeight(0).textSize(w/cols-4);
+		textAlign(CENTER);
+		textFont("Arial Black");
+		text("Click here\nto control the game!", w/2, h/4);
+		pop();
+	  }
 }
 
 // Denne funktion bliver kaldt hver gang en tast trykkes ned
